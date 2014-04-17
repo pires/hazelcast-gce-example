@@ -1,0 +1,35 @@
+<hazelcast xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.hazelcast.com/schema/config hazelcast-config-3.3.xsd">
+  <script />
+  <group>
+    <name>hzgroup</name>
+    <password>hzpwd</password>
+  </group>
+  <management-center enabled="false" value="http://localhost:8080/mancenter" />
+  <network>
+    <port auto-increment="true">5701</port>
+    <join>
+      <multicast enabled="false">
+        <multicast-group>224.2.2.3</multicast-group>
+        <multicast-port>54327</multicast-port>
+      </multicast>
+      <tcp-ip enabled="false">
+        <interface>127.0.0.1</interface>
+      </tcp-ip>
+      <cloud enabled="true">
+        <provider>google-compute-engine</provider>
+        <access-key>@developer.gserviceaccount.com</access-key>
+        <secret-key>-----BEGIN RSA PRIVATE KEY-----
+          -----END RSA PRIVATE KEY-----</secret-key>
+        <region>europe-west1-a</region>
+        <group-name></group-name>
+        <tag-key>type</tag-key>
+        <tag-value>hz-nodes</tag-value>
+      </cloud>
+    </join>
+    <interfaces enabled="false">
+      <interface>10.240.*.*</interface>
+    </interfaces>
+  </network>
+</hazelcast>
