@@ -55,5 +55,5 @@ The last file (<my_key>.pem) should contain the private-key needed for you to us
 ### Testing cluster ###
 
 ```
-java -jar target/hazelcast-gce-example-0.1-SNAPSHOT-jar-with-dependencies.jar --account <your_account_id>@developer.gserviceaccount.com --pk <your_key>.pem
+java -jar target/hazelcast-gce-example-0.1-SNAPSHOT-jar-with-dependencies.jar
 ```
