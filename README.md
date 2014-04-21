@@ -1,4 +1,4 @@
-jclouds-gce-example
+hazelcast-gce-example
 ============
 
 ## Build ##
