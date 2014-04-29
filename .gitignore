@@ -16,3 +16,4 @@ log
 # private stuff #
 *.p12
 *.pem
+mykey.pem
